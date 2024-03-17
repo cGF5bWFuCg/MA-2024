@@ -1,30 +1,32 @@
 # mosquitto.log
 1. New Connection From Attacker's IP
-
+```bash
     1614556762: New connection from 192.168.198.11 on port 1883. [Client ID: attacker_client_001]
-
+```
 2. Excessive Connection Attempts
-
+```bash
     1614556763: New connection from 192.168.198.11 on port 1883. [Client ID: attacker_client_002]
     1614556763: New connection from 192.168.198.11 on port 1883. [Client ID: attacker_client_003]
-
+```
 3. Connections Not Completing MQTT Handshake
-
+```bash
     1614556770: Client attacker_client_001 has exceeded timeout, disconnecting.
-
+```
 4. Unusually Long Connection Durations
-
+```bash
     1614556872: Client attacker_client_004 has exceeded timeout, disconnecting.
-
+```
 5. Repeated Disconnections and Reconnections
-
+```bash
     1614556882: Client attacker_client_002 disconnected.
     1614556883: New connection from 192.168.198.11 on port 1883. [Client ID: attacker_client_002]
-
+```
 6. Error Messages Related to Resource Exhaustion
+```bash
 
     1614556900: Error: Too many connections.
-
+```
+```bash
     1623096018: New connection from 192.168.198.11 on port 1883.
     1623096019: New client connected from 192.168.198.11 as attackerClient01 (p2, c1, k60).
     1623096020: Client attackerClient01 sending PUBLISH (d0, q0, r0, m1, 'test/topic', ... (50 bytes)).
@@ -36,3 +38,4 @@
     1623096030: Warning: High CPU usage detected from client connections.
     1623096035: Warning: Memory usage is approaching the limit.
     1623096040: Security Alert: Suspicious activity detected from IP 192.168.198.11. High volume of connections and data packets.
+```
